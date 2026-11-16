@@ -2,6 +2,18 @@
 .data
 msg:   .asciiz "Dien nang (kWh): "
 nl:    .asciiz "\n"
+
+prompt1: .asciiz "Nhap chi so cu (kWh): "
+prompt2: .asciiz "Nhap chi so moi (kWh): "
+label:   .asciiz "Dien nang (kWh): "
+newline: .asciiz "\n"
+
+prompt: .asciiz "Nhap chi so (kWh): "
+m1:     .asciiz "Thang 1: "
+m2:     .asciiz "Thang 2: "
+m3:     .asciiz "Thang 3: "
+tot:    .asciiz "Tong:    "
+nl:     .asciiz "\n"
  
 .text
 .globl main
@@ -21,14 +33,6 @@ main:
 
 
 # Ma nguon 6 - dien nang tieu thu giua hai chi so
-.data
-prompt1: .asciiz "Nhap chi so cu (kWh): "
-prompt2: .asciiz "Nhap chi so moi (kWh): "
-label:   .asciiz "Dien nang (kWh): "
-newline: .asciiz "\n"
- 
-.text
-.globl main
 main:
     # --- doc chi so cu vao $s0 ---
     li   $v0, 4
@@ -65,16 +69,6 @@ main:
     syscall
 
 #ma nguon 7
-.data
-prompt: .asciiz "Nhap chi so (kWh): "
-m1:     .asciiz "Thang 1: "
-m2:     .asciiz "Thang 2: "
-m3:     .asciiz "Thang 3: "
-tot:    .asciiz "Tong:    "
-nl:     .asciiz "\n"
-
-.text
-.globl main
 main:
     
     li $v0, 4
