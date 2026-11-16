@@ -13,7 +13,6 @@ m1:     .asciiz "Thang 1: "
 m2:     .asciiz "Thang 2: "
 m3:     .asciiz "Thang 3: "
 tot:    .asciiz "Tong:    "
-nl:     .asciiz "\n"
  
 .text
 .globl main
